@@ -16,24 +16,27 @@ const displayDate = () => {
 
 // Write a JavaScript program to convert a number to a string.
 
-let someNumber = 4;
+const numConverter = () => {
+  let someNumber = 4;
+ 
+  let someConvertedStringNumber = someNumber.toString();
 
-let someConvertedStringNumber = someNumber.toString();
+  document.getElementById("convertedNumberToString").innerHTML = someConvertedStringNumber;
+}
 
 //console.log("Hi");
 
-if (someConvertedStringNumber !== someNumber) {
-  console.log("You converted the string!");
-}
-
 // Write a JavaScript program to convert a string to the number.
+const stringConverter = () => {
+  let someString = "6";
 
-let someString = "6";
-
-let someConvertedNumberString = parseInt(someString);
-
-if(someConvertedNumberString === 6){
-  console.log("You converted the string!");
+  let someConvertedNumberString = parseInt(someString);
+  document.getElementById("convertedStringToNumber").innerHTML = someConvertedNumberString;
+/*
+  if(someConvertedNumberString === 6){
+    console.log("You converted the string!");
+  } 
+*/
 }
 
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
@@ -44,68 +47,83 @@ if(someConvertedNumberString === 6){
   // * NaN
   // * String
   
-let testValue;
+const typeFinder = () => {
+  let testValue;
 
-const typeTeller = (someValue) => {
-  return typeof(someValue);
+  const typeTeller = (someValue) => {
+    return document.getElementById("typeFinder").innerHTML = typeof(someValue);
+  }
+
+  typeTeller(testValue);
 }
 
-typeTeller(testValue);
 
   
 // Write a JavaScript program that adds 2 numbers together.
 
-let numOne = 4;
-let numTwo = 5;
+const numberAdd = () => {
+  let numOne = 4;
+  let numTwo = 5;
 
-const numberAdd = (inputOne, inputTwo) => {
-  return inputOne + inputTwo;
+  const numberAdder = (inputOne, inputTwo) => {
+    return document.getElementById("sum").innerHTML = inputOne + inputTwo;
+  }
+
+  numberAdder(numOne, numTwo);
 }
-
-numberAdd(numOne, numTwo);
 
 // Write a JavaScript program that runs only when 2 things are true.
+const twoTruths = () => {
+  let factorOne = -1;
+  let factorTwo = 3;
 
-let factorOne = -1;
-let factorTwo = 3;
-
-const numberEvaluator = (inputOne, inputTwo) => {
-  if (inputOne < 5 && inputTwo < 5){
-    console.log("This program runs");
+  const numberEvaluator = (inputOne, inputTwo) => {
+    if (inputOne < 5 && inputTwo < 5){
+      console.log("This program runs");
+      document.getElementById("twoTruths").innerHTML = "-1 and 3 are less than 5";
+    }
   }
-}
 
-numberEvaluator(factorOne, factorTwo);
+  numberEvaluator(factorOne, factorTwo);
+
+}
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
 
 // Write a program that runs 1 of the 2 are true.
+const oneTruth = () => {
+  let factorThree = 1;
+  let factorFour = 9;
 
-let factorThree = 1;
-let factorFour = 9;
-
-const numberEvaluatorTwo = (inputOne, inputTwo) => {
-  if (inputOne < 5 || inputTwo < 5){
-    console.log("This program runs");
+  const numberEvaluatorTwo = (inputOne, inputTwo) => {
+    if (inputOne < 5 || inputTwo < 5){
+      console.log("This program runs");
+      document.getElementById("oneTruth").innerHTML = "1 is smaller than 5 but not 9";
+    }
   }
-}
 
 numberEvaluatorTwo(factorThree, factorFour);
 
-// Write a JavaScript program that runs when both things are not true.  
-
-let factorFive = 0;
-let factorSix = 10;
-
-const numberEvaluatorThree = (inputOne, inputTwo) => {
-  if(inputOne === 4 && inputTwo === 6){
-    console.log("Hey those inputs are true, what the heck?");
-  } else{
-    console.log("Hey, both conditionals are not true!");
-  }
 }
 
-numberEvaluatorThree(factorFive, factorSix);
+// Write a JavaScript program that runs when both things are not true.  
+
+const twoLies = () => {
+  let factorFive = 0;
+  let factorSix = 10;
+
+  const numberEvaluatorThree = (inputOne, inputTwo) => {
+    if(inputOne === 4 && inputTwo === 6){
+      console.log("Hey those inputs are true, what the heck?");
+    } else{
+      document.getElementById("twoLies").innerHTML = "0 does not equal 4 and 10 is not equal to 6";
+      console.log("Hey, both conditionals are not true!");
+    }
+  }
+  
+  numberEvaluatorThree(factorFive, factorSix);
+}
+
 
 // ***************************
 //         PART TWO
